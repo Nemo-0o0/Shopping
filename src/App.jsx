@@ -1,24 +1,32 @@
-import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { decrement, increment } from './redux/slides/counterSlide';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { routes } from './Routers';
+import { DefaultComponents } from './components/DefaultComponents/DefaultComponents';
+import { Fragment } from 'react';
 
-export function Counter() {
-    const count = useSelector((state) => state.counter.value);
-    const dispatch = useDispatch();
-
+function App() {
     return (
-        <div>
-            <div>
-                <button aria-label="Increment value" onClick={() => dispatch(increment())}>
-                    Increment
-                </button>
-                <span>{count}</span>
-                <button aria-label="Decrement value" onClick={() => dispatch(decrement())}>
-                    Decrement
-                </button>
-            </div>
-        </div>
+        <>
+            <Router>
+                <Routes>
+                    {routes.map((route, index) => {
+                        const Page = route.page;
+                        const Layout = route.isShowHeader ? DefaultComponents : Fragment;
+                        return (
+                            <Route
+                                key={index}
+                                path={route.path}
+                                element={
+                                    <Layout>
+                                        <Page />
+                                    </Layout>
+                                }
+                            />
+                        );
+                    })}
+                </Routes>
+            </Router>
+        </>
     );
 }
 
-export default Counter;
+export default App;
