@@ -1,7 +1,7 @@
 import { Col, Row } from 'antd';
 import './Header.scss';
-import Search from 'antd/es/transfer/search';
 import { CaretDownOutlined, ShoppingCartOutlined, UserOutlined } from '@ant-design/icons';
+import ButtonInputSearch from '../ButtonInputSearch/ButtonInputSearch';
 
 function HeaderComponents() {
     return (
@@ -13,9 +13,14 @@ function HeaderComponents() {
                 </Col>
                 {/* Input */}
                 <Col span={12}>
-                    <Search placeholder="input search text" enterButton />
+                    <ButtonInputSearch
+                        size="large"
+                        variant={false}
+                        textButton="Tìm kiếm"
+                        placeholder="Input search text"
+                    />
                 </Col>
-                <Col span={6} style={{ display: 'flex', gap: '20px' }}>
+                <Col span={6} style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
                     {/* Account */}
                     <div className="account">
                         <UserOutlined className="icon" />
