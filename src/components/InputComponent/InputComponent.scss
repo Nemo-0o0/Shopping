@@ -1,0 +1,14 @@
+@use '../../styles/variables.scss' as vars;
+
+.Input {
+    flex: 1;
+
+    .ant-input {
+        border-radius: inherit;
+        transition: border-color 0.3s ease;
+        border: 1px solid vars.$color-gray;
+        &:focus-visible {
+            outline: 1px solid vars.$four-color;
+        }
+    }
+}

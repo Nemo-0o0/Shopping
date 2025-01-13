@@ -1,0 +1,27 @@
+@use '../../styles/variables.scss' as vars;
+
+.Button {
+    border-radius: initial;
+    .ant-btn {
+        transition: all 0.3s ease; // Hiệu ứng chuyển đổi mượt mà
+        border-radius: initial;
+
+        &:hover {
+            background-color: vars.$second-color; // Màu nền khi hover
+            border-color: vars.$four-color; // Màu viền khi hover
+            color: vars.$color-white; // Màu chữ khi hover
+            transform: translateY(-2px); // Hiệu ứng nhấc nút lên
+            box-shadow: 0 4px 8px vars.$color-black; // Thêm bóng
+        }
+
+        &:focus {
+            outline: none; // Tắt viền mặc định khi focus
+            box-shadow: 0 0 0 3px vars.$third-color; // Viền focus
+        }
+
+        &:active {
+            transform: translateY(0); // Reset nhấc nút khi click
+            box-shadow: none; // Tắt bóng khi click giữ
+        }
+    }
+}
