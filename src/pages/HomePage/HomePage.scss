@@ -8,6 +8,10 @@
         align-items: center;
         justify-content: flex-start;
         gap: 16px;
-        border-bottom: 1px solid vars.$second-color;
+        height: 44px;
     }
+}
+.container {
+    background-color: vars.$background-gray;
+    padding: 0 120px;
 }
