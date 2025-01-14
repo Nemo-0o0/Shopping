@@ -13,7 +13,12 @@ function HeaderComponents() {
                 </Col>
                 {/* Input */}
                 <Col span={12}>
-                    <SearchHeader size="large" variant={false} textButton="Tìm kiếm" placeholder="Input search text" />
+                    <SearchHeader
+                        size="large"
+                        variant="default"
+                        textButton="Tìm kiếm"
+                        placeholder="Input search text"
+                    />
                 </Col>
                 <Col span={6} style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
                     {/* Account */}

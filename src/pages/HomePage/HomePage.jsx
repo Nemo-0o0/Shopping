@@ -4,6 +4,7 @@ import './HomePage.scss';
 import Slider1 from '../../assets/img/Slider1.webp';
 import Slider2 from '../../assets/img/Slider2.webp';
 import Slider3 from '../../assets/img/Slider3.webp';
+import CardComponent from '../../components/CardComponent/CardComponent';
 
 function HomePage() {
     const arr = ['TV', 'Tu Lanh', 'Laptop'];
@@ -19,6 +20,9 @@ function HomePage() {
             </div>
             <div className="container">
                 <SliderComponent arrImages={images} />
+                <div className="card">
+                    <CardComponent />
+                </div>
             </div>
         </>
     );

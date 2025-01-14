@@ -1,5 +1,9 @@
 @use '../../styles/variables.scss' as vars;
 
+.ant-btn-variant-outlined {
+    border-color: vars.$primary-color;
+}
+
 .Button {
     border-radius: initial;
     .ant-btn {
