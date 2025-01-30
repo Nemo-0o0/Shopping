@@ -6,13 +6,23 @@
     align-items: center;
     gap: 16px;
     flex-wrap: nowrap;
-}
 
-.logo {
-    font-size: 18px;
-    color: vars.$color-white;
-    font-weight: bold;
-    text-align: left;
+    .col-logo {
+        padding: 0;
+
+        .logo {
+            font-size: 18px;
+            color: vars.$color-white;
+            font-weight: bold;
+            text-align: left;
+        }
+    }
+
+    .col-account {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
 }
 
 .account,

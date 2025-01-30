@@ -3,12 +3,13 @@ import './Header.scss';
 import { CaretDownOutlined, ShoppingCartOutlined, UserOutlined } from '@ant-design/icons';
 import SearchHeader from '../SearchHeader/SearchHeader';
 
+// Define the onSearch function
 function HeaderComponents() {
     return (
         <div>
             <Row className="row" gutter={16}>
                 {/* Logo */}
-                <Col span={6}>
+                <Col className="col-logo" span={6}>
                     <span className="logo">SHOPPING</span>
                 </Col>
                 {/* Input */}
@@ -20,7 +21,7 @@ function HeaderComponents() {
                         placeholder="Input search text"
                     />
                 </Col>
-                <Col span={6} style={{ display: 'flex', gap: '20px', alignItems: 'center' }}>
+                <Col className="col-account" span={6}>
                     {/* Account */}
                     <div className="account">
                         <UserOutlined className="icon" />

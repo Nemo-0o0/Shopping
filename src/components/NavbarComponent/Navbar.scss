@@ -1,0 +1,33 @@
+@use '../../styles/variables.scss' as vars;
+
+.checkbox-group {
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+}
+
+.Navbar-star {
+    display: flex;
+}
+
+.Navbar-price {
+    padding: 4px;
+    border-radius: 10px;
+    width: fit-content;
+    background-color: vars.$background-gray;
+    color: vars.$color-black;
+}
+
+.wrapper-navbar {
+    .navbar-h4 {
+        color: vars.$color-black;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .wrapper-content {
+        display: flex;
+        gap: 12px;
+        flex-direction: column;
+    }
+}
